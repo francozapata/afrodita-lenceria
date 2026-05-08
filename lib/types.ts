@@ -1,0 +1,7 @@
+export type ProductImage = { id: string; product_id: string; image_url: string; sort_order: number; color?: string | null; is_primary?: boolean | null; };
+export type ProductVariant = { id: string; product_id: string; size: string; color: string; stock: number; sku: string | null; };
+export type Category = { id: string; name: string; slug: string; parent_slug: string | null; is_active: boolean; };
+export type Product = { id: string; category_id?: string | null; name: string; slug: string; description: string | null; price: number; compare_at_price: number | null; is_active: boolean; is_featured: boolean; created_at: string; product_images?: ProductImage[]; product_variants?: ProductVariant[]; categories?: Category | null; };
+export type CartItem = { productId: string; variantId: string; name: string; slug: string; price: number; image?: string | null; size: string; color: string; quantity: number; stock: number; };
+export type Order = { id: string; customer_email: string; customer_name: string | null; customer_phone: string | null; shipping_method?: string | null; shipping_address: string | null; shipping_city: string | null; shipping_postal_code: string | null; subtotal: number; shipping_cost: number; total: number; status: string; payment_status: string; tracking_code: string | null; created_at: string; order_items?: OrderItem[]; };
+export type OrderItem = { id: string; order_id: string; product_id: string; variant_id: string; product_name: string; size: string; color: string; quantity: number; unit_price: number; total: number; };

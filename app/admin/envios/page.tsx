@@ -1,0 +1,3 @@
+"use client";
+import Link from "next/link";
+export default function AdminEnvios(){return <main className="section"><Link href="/admin" className="underline">← Volver</Link><div className="card mt-6 p-8"><h1 className="font-display text-5xl font-black">Envíos</h1><p className="mt-4 text-[#80666b]">La v4 trae checkout con tres métodos base: retiro/coordinar, Córdoba capital e interior. Más adelante podemos convertir esto en tabla editable por CP, zona o distancia.</p><ul className="mt-5 list-disc pl-5 text-[#80666b]"><li>Retiro/coordinar: $0</li><li>Córdoba capital: $2.500</li><li>Interior del país: $5.500</li></ul></div></main>}
