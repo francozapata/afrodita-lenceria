@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Product } from "@/lib/types";
 import { productImage, totalStock } from "@/lib/catalog";
 import { ShoppingBag } from "lucide-react";
 
-export default function ProductCard({product}:{product:Product}){
+export default function ProductCard({product}:{product:any}){
   const stock=totalStock(product); const img=productImage(product);
   return <Link href={`/productos/${product.id}`} className="group card block overflow-hidden transition hover:-translate-y-1 hover:shadow-[0_34px_80px_rgba(73,50,56,.16)]">
     <div className="relative aspect-[4/5] overflow-hidden bg-[#fff8ef]">
